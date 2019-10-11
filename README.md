@@ -1,25 +1,36 @@
+# Description
+Faucets mobile app
 
-#### Versions:
-nvm install v10.16.3
+#### Prerequisites:
+nvm==0.35.0
+node==v12.11.1
+openjdk==1.8.0
 
 #### Dependencies
-sudo apt-get install android-tools-adb 
-
-
-#### Android Studio
 ```
-cd /usr/local/android-studio/bin/ && ./studio.sh 
-cd ~/genymotion && ./genymotion
+./install.sh
 ```
-
 #### Running
 ```
 adb devices
 adb connect {IP}:{PORT}
-
 react-native run-android
 ```
 
+#### build
+```
+keytool -genkey -v -keystore faucet-release-key.keystore -alias faucet-key-alias -keyalg RSA -keysize 2048 -validity 10000
+mv faucet-release-key.keystore android/app/
+cd android && ./gradlew assembleRelease
+cd android/app/build/outputs/apk/release && ls
+```
+
+#### Testing the release build
+```
+react-native run-android --variant=release
+```
+
 #### Referencies:
-- https://docs.rocketseat.dev/ambiente-react-native/android/linux
-- https://www.youtube.com/watch?v=XcU9GEUZTQA
+- [Install nvm](https://github.com/nvm-sh/nvm)
+- [Tutorial](https://docs.rocketseat.dev/ambiente-react-native/android/linux)
+- [Youtube](https://www.youtube.com/watch?v=XcU9GEUZTQA)
