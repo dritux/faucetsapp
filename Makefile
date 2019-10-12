@@ -1,10 +1,3 @@
-DEPENDENCIES = build-essential libssl-dev gcc-multilib lib32z1 lib32stdc++6 android-tools-adb nodejs npm
-
-sudo apt-get install gcc-multilib lib32z1 lib32stdc++6
-
-dependencies:
-	sudo apt-get install -y ${DEPENDENCIES}
-
 install:
 	npm install --no-optional
 
@@ -14,7 +7,14 @@ start:
 production:
 	make install
 
+clean:
+	gradlew clean
+	npm cache clean --force
+	rm -rf node_modules
+	npm install
+	npm start --reset-cache
+
 all:
-	make dependencies
+	make clean
 	make install
 	make start

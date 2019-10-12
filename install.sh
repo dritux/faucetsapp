@@ -9,6 +9,7 @@ sudo apt-get install -y build-essential \
     lib32z1 \
     lib32stdc++6 \
     curl \
+    gradle \
     android-tools-adb \
     npm \
     virtualbox

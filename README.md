@@ -12,8 +12,10 @@ openjdk==1.8.0
 ```
 #### Running
 ```
+cd ~/genymotion && ./genymotion
 adb devices
 adb connect {IP}:{PORT}
+react-native start
 react-native run-android
 ```
 
@@ -34,3 +36,5 @@ react-native run-android --variant=release
 - [Install nvm](https://github.com/nvm-sh/nvm)
 - [Tutorial](https://docs.rocketseat.dev/ambiente-react-native/android/linux)
 - [Youtube](https://www.youtube.com/watch?v=XcU9GEUZTQA)
+- [Evoluindo](https://vizir.com.br/2018/06/react-native-evoluindo-o-codigo/)
+- [Native base](https://blog.rocketseat.com.br/native-base-no-react-native/)
