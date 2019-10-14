@@ -1,35 +1,26 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  FlatList,
-  View
-} from 'react-native';
-
-import Header from './src/components/Header';
-
-
-class App extends Component {
+import { Container, Tab, Tabs, TabHeading, Icon, Body, Text, Left, Right } from 'native-base';
+import TitleHeader from './src/components/Header';
+import Faucet from './src/components/Faucet';
+import Mining from './src/components/Mining';
+import Exchange from './src/components/Exchange';
+export default class TabsAdvancedExample extends Component {
   render() {
-    const title = 'meu titulo';
     return (
-      <View style={styles.itemsContainer}>
-        <Header title={title}/>
-      </View>
+      <Container>
+        <TitleHeader />
+        <Tabs>
+          <Tab heading={ <TabHeading><Icon name="home" /><Text>Faucets</Text></TabHeading>}>
+            <Faucet />
+          </Tab>
+          <Tab heading={ <TabHeading><Text>Mining</Text></TabHeading>}>
+            <Mining />
+          </Tab>
+          <Tab heading={ <TabHeading><Text>Exchange</Text></TabHeading>}>
+            <Exchange />
+          </Tab>
+        </Tabs>
+      </Container>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  itemsContainer: {
-    backgroundColor: '#f4f5f9',
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    paddingBottom: 25,
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingTop: 25,
-  },
-});
-
-export default App;

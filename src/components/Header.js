@@ -3,75 +3,30 @@ import {
   StyleSheet,
   Image
 } from 'react-native';
-import { 
-    Container,
-    Left,
-    Right,
-    Body,
-    Title,
-    Button,
-    Icon,
-    View,
-    Fab,
-    List,
-    ListItem,
-    Thumbnail,
-    Text,
-    Badge,
-    Content,
-    Tab,
-    Tabs,
-    TabHeading,
-    Card,
-    CardItem
-} from 'native-base';
+import { Header, Body, Title, Subtitle, Left, Right} from 'native-base';
 
 const Home = () => null;
 const Messages = () => null;
 const Notification = () => null;
 
-const Header = ({ title }) => {
+const TitleHeader = ({ title }) => {
   return (
-      <Container>
-        <Header androidStatusBarColor="#573ea8" style={styles.header} hasTabs>
-          <Left>
-            <Text style={styles.logo}>Logo</Text>
-          </Left>
-          <Body>
-            <Title>{title}</Title>
-          </Body>
-        </Header>
-        <View style={styles.container}>
-        <Tabs>
-          <Tab heading={<TabHeading style={styles.tabHeading} ><Icon type="FontAwesome" name="home" /></TabHeading>}>
-            <Home />
-          </Tab>
-          <Tab heading={<TabHeading style={styles.tabHeading} ><Icon type="FontAwesome" name="bell-o" /></TabHeading>}>
-            <Notification />
-          </Tab>
-          <Tab heading={<TabHeading style={styles.tabHeading} ><Icon type="FontAwesome" name="envelope-o" /></TabHeading>}>
-            <Messages />
-          </Tab>
-        </Tabs>
-        </View>
-      </Container>
+      <Header hasTabs>
+        <Body>
+          <Title style={styles.title}>Top Paying Faucets List</Title>
+          <Subtitle style={styles.subtitle}>All top paying faucets in 1 place!</Subtitle>
+        </Body>
+      </Header>
   );
 }
 
 const styles = StyleSheet.create({
-    tabHeading: {
-        backgroundColor: "#7159C1",
+    title: {
+        marginLeft: 60,
     },
-    header: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        marginBottom: 10,
-        textAlign: 'center',
-        backgroundColor: "#7159C1",
+    subtitle: {
+        marginLeft: 60,
     },
-    container: {
-        flex: 1,
-    }
 });
 
-export default Header
+export default TitleHeader

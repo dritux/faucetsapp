@@ -8,7 +8,6 @@ production:
 	make install
 
 clean:
-	gradlew clean
 	npm cache clean --force
 	rm -rf node_modules
 	npm install

@@ -16,6 +16,7 @@ cd ~/genymotion && ./genymotion
 adb devices
 adb connect {IP}:{PORT}
 react-native start
+react-native link
 react-native run-android
 ```
 
@@ -38,3 +39,8 @@ react-native run-android --variant=release
 - [Youtube](https://www.youtube.com/watch?v=XcU9GEUZTQA)
 - [Evoluindo](https://vizir.com.br/2018/06/react-native-evoluindo-o-codigo/)
 - [Native base](https://blog.rocketseat.com.br/native-base-no-react-native/)
+- [HamburgerIcon](https://shockoe.com/blog/how-to-combine-bottom-tabs-top-tabs-and-a-hamburger-menu-in-a-react-native-application/)
+- [Criptomobile](https://github.com/indreklasn/react-native-redux-crypto-tracker/tree/chapter-4)
+- [Cripto icons](https://github.com/atomiclabs/cryptocurrency-icons)
+- [Structure](https://www.freecodecamp.org/news/how-to-structure-your-project-and-manage-static-resources-in-react-native-6f4cfc947d92/)
+- [Structure](https://medium.com/the-andela-way/how-to-structure-a-react-native-app-for-scale-a29194cd33fc)
