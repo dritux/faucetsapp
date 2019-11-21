@@ -15,8 +15,8 @@ openjdk==1.8.0
 cd ~/genymotion && ./genymotion
 adb devices
 adb connect {IP}:{PORT}
-react-native start
 react-native link
+react-native start
 react-native run-android
 ```
 

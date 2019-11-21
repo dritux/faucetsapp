@@ -13,6 +13,9 @@ clean:
 	npm install
 	npm start --reset-cache
 
+upgrade:
+	react-native upgrade
+
 all:
 	make clean
 	make install

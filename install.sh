@@ -14,6 +14,8 @@ sudo apt-get install -y build-essential \
     npm \
     virtualbox
 
+sudo gem install cocoapods
+
 ~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3"
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
